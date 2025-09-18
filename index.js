@@ -262,3 +262,50 @@ function initializeEffects() {
 
 // Call initialization
 document.addEventListener('DOMContentLoaded', initializeEffects);
+
+// Demo Modal Functions
+function openDemo() {
+    const modal = document.getElementById('demoModal');
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    
+    // Add entrance animation
+    modal.style.opacity = '0';
+    modal.style.transform = 'scale(0.9)';
+    
+    setTimeout(() => {
+        modal.style.transition = 'all 0.3s ease';
+        modal.style.opacity = '1';
+        modal.style.transform = 'scale(1)';
+    }, 10);
+}
+
+function closeDemo() {
+    const modal = document.getElementById('demoModal');
+    modal.style.transition = 'all 0.3s ease';
+    modal.style.opacity = '0';
+    modal.style.transform = 'scale(0.9)';
+    
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }, 300);
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('demoModal');
+    if (e.target === modal) {
+        closeDemo();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('demoModal');
+        if (!modal.classList.contains('hidden')) {
+            closeDemo();
+        }
+    }
+});

@@ -60,11 +60,217 @@
                     Download Free App
                 </button>
                 <button class="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300">
-                    Watch Demo
+                    <span onclick="openDemo()">Watch Demo</span>
                 </button>
             </div>
         </div>
     </section>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="fixed inset-0 bg-black/80 backdrop-blur-lg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-2xl border border-purple-500/30 max-w-4xl w-full max-h-[90vh] overflow-hidden relative">
+            <div class="flex justify-between items-center p-6 border-b border-gray-700">
+                <h3 class="text-2xl font-bold text-white">FitLife App Demo</h3>
+                <button onclick="closeDemo()" class="text-gray-400 hover:text-white text-2xl font-bold">×</button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto max-h-[calc(90vh-100px)]">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Phone Demo 1 - Dashboard -->
+                    <div class="text-center">
+                        <h4 class="text-lg font-semibold text-purple-400 mb-4">Dashboard Overview</h4>
+                        <div class="w-64 h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-4 border border-gray-700 shadow-2xl mx-auto">
+                            <div class="w-full h-full bg-black rounded-2xl overflow-hidden relative">
+                                <!-- Status Bar -->
+                                <div class="absolute top-2 left-4 right-4 flex justify-between items-center text-white text-xs">
+                                    <span>9:41</span>
+                                    <div class="flex space-x-1">
+                                        <div class="w-4 h-2 bg-white rounded-sm"></div>
+                                        <div class="w-4 h-2 bg-white rounded-sm"></div>
+                                        <div class="w-4 h-2 bg-white rounded-sm"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Header -->
+                                <div class="absolute top-8 left-4 right-4">
+                                    <div class="flex justify-between items-center mb-6">
+                                        <div class="text-white font-bold text-lg">FitLife</div>
+                                        <div class="w-8 h-8 bg-purple-500 rounded-full"></div>
+                                    </div>
+                                    <div class="text-gray-300 text-sm mb-2">Good morning, Alex!</div>
+                                    <div class="text-white font-semibold text-xl">Ready to crush today?</div>
+                                </div>
+                                
+                                <!-- Stats Cards -->
+                                <div class="absolute top-32 left-4 right-4 space-y-3">
+                                    <div class="bg-purple-600/20 p-3 rounded-xl border border-purple-500/30">
+                                        <div class="text-purple-400 text-xs mb-1">Today's Workout</div>
+                                        <div class="text-white font-semibold text-sm">Push Day - Upper Body</div>
+                                        <div class="text-gray-400 text-xs">45 min • 8 exercises</div>
+                                    </div>
+                                    
+                                    <div class="bg-pink-600/20 p-3 rounded-xl border border-pink-500/30">
+                                        <div class="text-pink-400 text-xs mb-1">Weekly Progress</div>
+                                        <div class="text-white font-semibold text-sm">4/5 workouts completed</div>
+                                        <div class="w-full bg-gray-700 rounded-full h-1.5 mt-2">
+                                            <div class="bg-pink-500 h-1.5 rounded-full" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-cyan-600/20 p-3 rounded-xl border border-cyan-500/30">
+                                        <div class="text-cyan-400 text-xs mb-1">Current Streak</div>
+                                        <div class="text-white font-semibold text-sm">12 days strong! 🔥</div>
+                                        <div class="text-gray-400 text-xs">Personal best!</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Bottom Navigation -->
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <div class="bg-gray-800 rounded-xl p-2 flex justify-around">
+                                        <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
+                                            <span class="text-white text-xs">🏠</span>
+                                        </div>
+                                        <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
+                                            <span class="text-gray-400 text-xs">💪</span>
+                                        </div>
+                                        <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
+                                            <span class="text-gray-400 text-xs">📊</span>
+                                        </div>
+                                        <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
+                                            <span class="text-gray-400 text-xs">👤</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone Demo 2 - Workout Screen -->
+                    <div class="text-center">
+                        <h4 class="text-lg font-semibold text-pink-400 mb-4">Workout Tracking</h4>
+                        <div class="w-64 h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-4 border border-gray-700 shadow-2xl mx-auto">
+                            <div class="w-full h-full bg-black rounded-2xl overflow-hidden relative">
+                                <!-- Status Bar -->
+                                <div class="absolute top-2 left-4 right-4 flex justify-between items-center text-white text-xs">
+                                    <span>9:41</span>
+                                    <div class="flex space-x-1">
+                                        <div class="w-4 h-2 bg-white rounded-sm"></div>
+                                        <div class="w-4 h-2 bg-white rounded-sm"></div>
+                                        <div class="w-4 h-2 bg-white rounded-sm"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Workout Header -->
+                                <div class="absolute top-8 left-4 right-4">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <button class="text-white text-lg">←</button>
+                                        <div class="text-center">
+                                            <div class="text-white font-bold">Push Workout</div>
+                                            <div class="text-gray-400 text-xs">Exercise 3 of 8</div>
+                                        </div>
+                                        <button class="text-gray-400">⋯</button>
+                                    </div>
+                                    
+                                    <!-- Timer -->
+                                    <div class="text-center mb-6">
+                                        <div class="text-cyan-400 text-2xl font-bold">02:30</div>
+                                        <div class="text-gray-400 text-xs">Rest Time</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Exercise Info -->
+                                <div class="absolute top-40 left-4 right-4">
+                                    <div class="bg-gray-800 rounded-xl p-4 mb-4">
+                                        <div class="text-white font-semibold mb-2">Bench Press</div>
+                                        <div class="text-gray-400 text-sm mb-3">Target: Chest, Triceps, Shoulders</div>
+                                        
+                                        <!-- Sets -->
+                                        <div class="space-y-2">
+                                            <div class="flex justify-between items-center bg-green-600/20 p-2 rounded-lg border border-green-500/30">
+                                                <span class="text-green-400 text-sm">Set 1</span>
+                                                <span class="text-white text-sm">135 lbs × 12 ✓</span>
+                                            </div>
+                                            <div class="flex justify-between items-center bg-green-600/20 p-2 rounded-lg border border-green-500/30">
+                                                <span class="text-green-400 text-sm">Set 2</span>
+                                                <span class="text-white text-sm">145 lbs × 10 ✓</span>
+                                            </div>
+                                            <div class="flex justify-between items-center bg-purple-600/20 p-2 rounded-lg border border-purple-500/30">
+                                                <span class="text-purple-400 text-sm">Set 3</span>
+                                                <span class="text-white text-sm">155 lbs × 8</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Action Buttons -->
+                                    <div class="flex space-x-3">
+                                        <button class="flex-1 bg-purple-600 text-white py-3 rounded-xl font-semibold">
+                                            Complete Set
+                                        </button>
+                                        <button class="w-12 h-12 bg-gray-700 rounded-xl flex items-center justify-center">
+                                            <span class="text-white">⏸</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Features List -->
+                <div class="mt-8 grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-lg font-semibold text-cyan-400 mb-4">Key Features</h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center space-x-3">
+                                <span class="text-green-400">✓</span>
+                                <span>Real-time workout tracking with form analysis</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="text-green-400">✓</span>
+                                <span>AI-powered personalized workout plans</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="text-green-400">✓</span>
+                                <span>Progress analytics and performance insights</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="text-green-400">✓</span>
+                                <span>Smart nutrition recommendations</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-purple-400 mb-4">Coming Soon</h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center space-x-3">
+                                <span class="text-purple-400">⏳</span>
+                                <span>Social challenges and leaderboards</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="text-purple-400">⏳</span>
+                                <span>Wearable device integration</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="text-purple-400">⏳</span>
+                                <span>Virtual personal trainer sessions</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="text-purple-400">⏳</span>
+                                <span>Meal planning and grocery lists</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <button onclick="closeDemo()" class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-xl font-bold text-white hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
+                        Download FitLife Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Problem & Solution Section -->
     <section class="py-24 relative">
