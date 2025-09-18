@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife - Smart Fitness App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-950 text-white font-inter overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black/20 backdrop-blur-lg z-50 border-b border-purple-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">F</span>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">FitLife</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-300 hover:text-purple-400 transition-colors">Features</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-purple-400 transition-colors">Reviews</a>
+                    <a href="#download" class="text-gray-300 hover:text-purple-400 transition-colors">Download</a>
+                </div>
+                <button class="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 glow-button">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/20"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10 fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                    Your Fitness Journey
+                </span>
+                <br>
+                <span class="text-white">Starts Here</span>
+            </h1>
+            
+            <div class="text-2xl md:text-4xl font-semibold mb-8 h-16 flex items-center justify-center">
+                <span id="typing-text" class="text-cyan-400"></span>
+                <span class="animate-pulse text-cyan-400 ml-1">|</span>
+            </div>
+            
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Transform your body and mind with AI-powered workouts, personalized nutrition, and real-time progress tracking. Join millions who've already started their transformation.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-105 glow-button-large">
+                    Download Free App
+                </button>
+                <button class="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300">
+                    Watch Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="slide-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-red-400">The Problem</h2>
+                    <div class="space-y-6 text-gray-300 text-lg">
+                        <p class="flex items-start space-x-3">
+                            <span class="text-red-400 text-2xl">×</span>
+                            <span>80% of people quit their fitness goals within the first 3 months</span>
+                        </p>
+                        <p class="flex items-start space-x-3">
+                            <span class="text-red-400 text-2xl">×</span>
+                            <span>Lack of personalized guidance leads to poor results</span>
+                        </p>
+                        <p class="flex items-start space-x-3">
+                            <span class="text-red-400 text-2xl">×</span>
+                            <span>Generic workout plans don't adapt to your progress</span>
+                        </p>
+                        <p class="flex items-start space-x-3">
+                            <span class="text-red-400 text-2xl">×</span>
+                            <span>No motivation or accountability system</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="slide-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-green-400">Our Solution</h2>
+                    <div class="space-y-6 text-gray-300 text-lg">
+                        <p class="flex items-start space-x-3">
+                            <span class="text-green-400 text-2xl">✓</span>
+                            <span>AI-powered workouts that adapt to your progress in real-time</span>
+                        </p>
+                        <p class="flex items-start space-x-3">
+                            <span class="text-green-400 text-2xl">✓</span>
+                            <span>Personalized nutrition plans based on your goals and preferences</span>
+                        </p>
+                        <p class="flex items-start space-x-3">
+                            <span class="text-green-400 text-2xl">✓</span>
+                            <span>Smart progress tracking with detailed analytics and insights</span>
+                        </p>
+                        <p class="flex items-start space-x-3">
+                            <span class="text-green-400 text-2xl">✓</span>
+                            <span>Daily motivation and community support to keep you going</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        Powerful Features
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Everything you need to transform your body and mind, powered by cutting-edge AI technology.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card bg-gray-900/50 backdrop-blur-lg p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-purple-400 rounded-xl flex items-center justify-center mb-6 feature-icon">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-purple-400">Workout Tracker</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Smart tracking system that monitors your reps, sets, and progress. Get real-time feedback and form corrections.
+                    </p>
+                </div>
+                
+                <div class="feature-card bg-gray-900/50 backdrop-blur-lg p-8 rounded-2xl border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-600 to-pink-400 rounded-xl flex items-center justify-center mb-6 feature-icon">
+                        <span class="text-2xl">🤖</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-pink-400">AI Diet Suggestions</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Personalized meal plans generated by AI based on your goals, preferences, and dietary restrictions.
+                    </p>
+                </div>
+                
+                <div class="feature-card bg-gray-900/50 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-cyan-600 to-cyan-400 rounded-xl flex items-center justify-center mb-6 feature-icon">
+                        <span class="text-2xl">📈</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-cyan-400">Progress Dashboard</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Comprehensive analytics showing your transformation journey with detailed charts and milestone tracking.
+                    </p>
+                </div>
+                
+                <div class="feature-card bg-gray-900/50 backdrop-blur-lg p-8 rounded-2xl border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-600 to-green-400 rounded-xl flex items-center justify-center mb-6 feature-icon">
+                        <span class="text-2xl">💪</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-green-400">Daily Motivation</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Daily challenges, motivational quotes, and community support to keep you motivated and accountable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Mockup Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <div class="mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                        Experience FitLife
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    See how our intuitive interface makes fitness tracking effortless and enjoyable.
+                </p>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="phone-mockup relative">
+                    <div class="w-80 h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-6 border border-gray-700 shadow-2xl">
+                        <div class="w-full h-full bg-black rounded-2xl overflow-hidden relative">
+                            <!-- Phone Screen Content -->
+                            <div class="absolute top-4 left-4 right-4">
+                                <div class="flex justify-between items-center mb-6">
+                                    <div class="text-white font-bold text-lg">FitLife</div>
+                                    <div class="w-8 h-8 bg-purple-500 rounded-full"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-20 left-4 right-4 bottom-4 space-y-4">
+                                <div class="bg-purple-600/20 p-4 rounded-xl border border-purple-500/30">
+                                    <div class="text-purple-400 text-sm mb-2">Today's Workout</div>
+                                    <div class="text-white font-semibold">Push Day - Upper Body</div>
+                                </div>
+                                
+                                <div class="bg-pink-600/20 p-4 rounded-xl border border-pink-500/30">
+                                    <div class="text-pink-400 text-sm mb-2">Progress</div>
+                                    <div class="text-white font-semibold">12 workouts completed</div>
+                                </div>
+                                
+                                <div class="bg-cyan-600/20 p-4 rounded-xl border border-cyan-500/30">
+                                    <div class="text-cyan-400 text-sm mb-2">Streak</div>
+                                    <div class="text-white font-semibold">7 days strong! 🔥</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                        What Users Say
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Join thousands who have transformed their lives with FitLife.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-900/50 backdrop-blur-lg p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            N
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-white font-semibold">Naman Vishnoi</div>
+                            <div class="text-gray-400 text-sm">Lost 25 lbs in 3 months</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        "FitLife completely changed my approach to fitness. The AI suggestions are spot-on and the progress tracking keeps me motivated every single day."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gray-900/50 backdrop-blur-lg p-8 rounded-2xl border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            K
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-white font-semibold">Khushi </div>
+                            <div class="text-gray-400 text-sm">Built muscle & strength</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        "As someone who tried countless fitness apps, FitLife stands out. The personalized workouts adapt as I get stronger. It's like having a personal trainer!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gray-900/50 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            L
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-white font-semibold">Lavanya</div>
+                            <div class="text-gray-400 text-sm">Improved overall health</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        "The nutrition guidance is incredible. FitLife helped me develop healthy eating habits that I actually enjoy. I feel amazing and look even better!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section id="download" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-cyan-600/20"></div>
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10 fade-in">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                    Ready to Transform?
+                </span>
+            </h2>
+            <p class="text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Join over 2 million users who have already started their fitness transformation with FitLife.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                <button class="bg-gradient-to-r from-purple-600 to-pink-600 px-12 py-6 rounded-xl font-bold text-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-105 glow-button-large">
+                    Download for Free
+                </button>
+                <button class="border-2 border-cyan-400 text-cyan-400 px-12 py-6 rounded-xl font-bold text-xl hover:bg-cyan-400 hover:text-black transition-all duration-300">
+                    Start 7-Day Trial
+                </button>
+            </div>
+            
+            <div class="flex justify-center space-x-8 text-gray-400">
+                <div class="flex items-center space-x-2">
+                    <span class="text-green-400">✓</span>
+                    <span>Free Download</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-green-400">✓</span>
+                    <span>No Credit Card Required</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-green-400">✓</span>
+                    <span>Cancel Anytime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 backdrop-blur-lg border-t border-gray-800 py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">F</span>
+                        </div>
+                        <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">FitLife</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Transform your fitness journey with AI-powered workouts and personalized nutrition guidance.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Features</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Workout Tracker</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">AI Diet Plans</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Progress Analytics</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-purple-600 hover:bg-purple-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25">
+                            <span class="text-white">f</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-pink-600 hover:bg-pink-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/25">
+                            <span class="text-white">t</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-cyan-600 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+                            <span class="text-white">in</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    © 2024 FitLife. All rights reserved.
+                </p>
+                <div class="flex space-x-6 text-gray-400">
+                    <a href="#" class="hover:text-purple-400 transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-purple-400 transition-colors">Terms</a>
+                    <a href="#" class="hover:text-purple-400 transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
